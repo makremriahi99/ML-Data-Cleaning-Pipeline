@@ -1,31 +1,28 @@
-# ML Data Cleaning Pipeline
+# Pipeline di Pulizia Dati con Pandas
 
-A robust **data cleaning and preprocessing pipeline** built with pandas, applied to a realistic employee dataset (1000 rows × 6 columns).
+Pipeline completa di **pulizia e preprocessing** di un dataset da 1000 righe contenente dati anagrafici e lavorativi di dipendenti, realizzata con pandas.
 
-## What it does
+## Cosa fa
 
-- Detects and handles **missing values** (NaN imputation by column type)
-- Removes **duplicate rows** with configurable subset matching
-- Enforces **type coercion** (dates, numerics, categoricals)
-- Standardizes text fields (strip whitespace, normalize case)
-- Generates a before/after **data quality report**
+1. Caricamento del dataset da CSV
+2. Analisi dei valori mancanti e duplicati
+3. Normalizzazione dei tipi di dato (date, numerici, stringhe)
+4. Rimozione degli outlier
+5. Esportazione del dataset pulito
 
-## Dataset
+## Come si usa
 
-Synthetic `employees.csv` — 1000 rows with columns: `id`, `name`, `department`, `salary`, `hire_date`, `active`.
+```bash
+pip install pandas numpy
+python data_cleaning.py
+```
 
-Intentionally contains nulls (~8%), duplicates (~5%), and mixed-type fields.
+## Tecnologie
 
-## Tech stack
+- `pandas` — manipolazione e analisi dati
+- `numpy` — operazioni numeriche
+- Dataset: 1000 righe, dati dipendenti (nome, età, stipendio, reparto, data assunzione)
 
-- Python 3
-- `pandas` — core pipeline
-- `numpy` — numeric helpers
+## Tag
 
-## Usage
-
-Open `notebook.ipynb` in Google Colab or Jupyter. Each cell corresponds to one cleaning stage with before/after output.
-
-## Topics
-
-`python` `pandas` `data-cleaning` `etl` `machine-learning` `preprocessing` `data-quality`
+`python` `pandas` `data-cleaning` `machine-learning` `preprocessing` `numpy` `data-science`
